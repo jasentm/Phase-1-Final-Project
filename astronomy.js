@@ -1,6 +1,5 @@
-    
+//Fetch response from NASA Daily Image
 const fetchMe = () => {
-
     fetch(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
     .then(res =>{
     if(res.ok){return res.json();}
@@ -13,7 +12,7 @@ const fetchMe = () => {
     .then(res => renderSpace(res))
     .catch(error => console.log(error)) 
 }
-
+//Render space photo 
 const renderSpace = (response) => {
     
     const imgSpace = document.getElementById("id-ph3");
