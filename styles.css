@@ -20,14 +20,12 @@ header {
   color: white;
   background-color: black;
 }
-/*
+
 #top-render {
   display: flex;
-  overflow-x: auto;
   margin: 1rem 0;
-  max-width: calc(100vw - 2rem);
 }
-*/
+
 #id-ph1 {
   flex: 0 1 auto;
   height: 300px;
@@ -38,8 +36,11 @@ header {
 #id-ph2 {
   flex: 0 1 auto;
   height: 300px;
+  max-width: 400px;
   margin-right: 0.5rem;
-  cursor: pointer;
+  padding-top: 100px;
+  font-size: x-large;
+  
 }
 
 #id-ph3 {
@@ -117,8 +118,8 @@ input[type="submit"]:active {
   gap: 5px;
   width: 313px;
   position: relative;
-  left: 400px;
-  bottom: 320px;
+  left: 450px;
+  bottom: 375px;
   border-style: groove;
 
 }
@@ -135,17 +136,6 @@ input[type="submit"]:active {
   background-color: gray;
 }
 
-#journal-board {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
-    width: 313px;
-    position: relative;
-    left: 400px;
-    bottom: 320px;
-    border-style: groove;
-
-}
 
 form h4 {
     width: 100%;
