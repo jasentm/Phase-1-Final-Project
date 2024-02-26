@@ -43,11 +43,21 @@ header {
   
 }
 
-#id-ph3 {
+.detail-image2 {
   flex: 0 1 auto;
   height: 300px;
   margin-right: 0.5rem;
   cursor: pointer;
+}
+
+.img-enlarged {
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 10
 }
 
 #top-render img:last-child {
