@@ -20,22 +20,36 @@ header {
   color: white;
   background-color: black;
 }
-
-#ramen-menu {
+/*
+#top-render {
   display: flex;
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
 }
-
-#ramen-menu img {
+*/
+#id-ph1 {
   flex: 0 1 auto;
   height: 300px;
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-#ramen-menu img:last-child {
+#id-ph2 {
+  flex: 0 1 auto;
+  height: 300px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+#id-ph3 {
+  flex: 0 1 auto;
+  height: 300px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+#top-render img:last-child {
   margin-right: 0;
 }
 
