@@ -20,10 +20,27 @@ const renderSpace = (response) => {
     imgSpace.src = response.url;
     imgSpace.alt = `Space photo`;
     imgSpace.title = response.title
+
 };
-  
-  //Invokes functions
-  const main = () => {
+
+const hoverRender = () => {
+  const imgPh3 = document.getElementById("id-ph3")
+
+  imgPh3.style.transform = scale(2);
+    
+}
+
+
+addEventListener("mouseover", (e) => {
+  hoverRender(e);
+})
+
+addEventListener("mouseout", (e) =>{
+  outRender(e);
+})
+ 
+//Invokes functions
+const main = () => {
     fetchMe()
   };
 
