@@ -86,7 +86,8 @@ journalForm.addEventListener('submit', (e) => {
         newEntryDiv.id = newJournalEntry.id
         newEntryDiv.style.backgroundColor = newJournalEntry.moodColor
         journalBoard.appendChild(newEntryDiv)
-
+        
+        //Creates clickable link to journal entry
         const newEntryText = document.createElement('a')
 
         newEntryText.setAttribute('href','')
@@ -103,19 +104,65 @@ journalForm.addEventListener('submit', (e) => {
 
         //click event on link preventing reload 
         //WE NEED THIS TO DO SOMETHING ELSE 
-        newEntryText.addEventListener('click', (e) => {
+        newEntryText.addEventListener('mouseover', (e) => {
             e.preventDefault()
-            pastEntry.style.display = 'block'
+            const divHistory = document.getElementById("history");
+            const para1 = document.createElement('p');
+            const colorBox = document.createElement("div");
+            const para2 = document.createElement('p');
+            const para3 = document.createElement('p');
+            const para4 = document.createElement('p');
 
-            previousMood.textContent = newJournalEntry.mood
-            previousJournal.textContent = newJournalEntry.entry
-            previousInspo.textContent = newJournalEntry.futureInspo
+
+            para1.textContent = e.target.date;
+            colorBox.style.width = '250px';
+            colorBox.style.heigth = '75px';
+            colorBox.style.backgroundColor = e.target.moodColor;
+            colorBox.style.border = "1px solid black";
+            colorBox.style.margin = "5px";
+            para2.textContent = e.target.mood;
+            para3.textContent = e.target.entry;
+            para4.textContent = e.target.futureInspo;
+
+            divHistory.appendChild(para1);
+            divHistory.appendChild(para2);
+            divHistory.appendChild(colorBox);
+            divHistory.appendChild(para3);
+            divHistory.appendChild(para4);
+
+            
+            //pastEntry.style.display = 'block'
+            //previousMood.textContent = newJournalEntry.mood
+            //previousJournal.textContent = newJournalEntry.entry
+            //previousInspo.textContent = newJournalEntry.futureInspo
+        })
+
+        newEntryText.addEventListener('mouseout', (e) => {
+            e.preventDefault()
+
+            const divHistory = getElementById ('history');
+
+            divHistory.innerHTML = '';
+
+        
+            newEntryText.addEventListener('click', (e) => {
+            e.preventDefault()
+            
+            //pastEntry.style.display = 'block'
+            //previousMood.textContent = newJournalEntry.mood
+            //previousJournal.textContent = newJournalEntry.entry
+            //previousInspo.textContent = newJournalEntry.futureInspo
         })
 
 
     })
     .catch((error => console.error(error)))
 })
+})
+
+
+
+
 
 
 //fetch and append quote from past self to DOM
