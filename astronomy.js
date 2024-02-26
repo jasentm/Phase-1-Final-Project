@@ -10,6 +10,7 @@ let currentImg = {}
     })
     .then(res => {renderSpace(res); return res})
     .then(res => currentImg = res)
+    .then(res => console.log(res))
     .catch(error => console.log(error)) 
 }
 
@@ -29,15 +30,27 @@ const hoverRender = (e) => {
 
   imgSpace.classList.remove('detail-image2');
   imgSpace.classList.add('img-enlarged');
-  
-  
+
+  //const imgDiv = document.getElementById('id-3');
+  //const para = document.createElement('p');
+
+// para.id = "removable-para"
+// para.textContent = `${explanation}`;
+//imgDiv.appendChild(para);
+    
 };
 
 const outRender = (e) => {
   e.preventDefault()
 
+  //const para = document.getElementById("removable-para")
+
   imgSpace.classList.remove('img-enlarged');
   imgSpace.classList.add('detail-image2');
+
+  //if (para) {para.remove();
+  //}
+
   
 }
 

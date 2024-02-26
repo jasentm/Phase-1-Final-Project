@@ -100,7 +100,7 @@ const renderArtwork = (response) => {
 
 
 //Event Listeners
-
+/*
 img.addEventListener('mouseover', () => {
   img.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
   img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
@@ -109,7 +109,7 @@ img.addEventListener('mouseout', () => {
   img.style.transform = 'scale(1)';
   img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out
 });
-
+*/
 
 // getArt().then(() => {
 //   console.log('getImageIds called successfully.');
@@ -130,13 +130,13 @@ img.addEventListener('mouseout', () => {
     
     img.addEventListener('mouseover', () => {
       enlargeImage(img);
-      displayImageInfo(response);
+    //  displayImageInfo(response);
     });
   
 //     // Add mouseout event listener to reset the image size and hide info
     img.addEventListener('mouseout', () => {
       resetImageSize(img);
-      hideImageInfo();
+    //  hideImageInfo();
     });
   
   
@@ -144,19 +144,22 @@ img.addEventListener('mouseout', () => {
 
   const enlargeImage = (img) => {
     img.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
-  img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
-};
-
-
+    img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
 
 };
+
+
+
+};
+
   // Function to reset the image size on mouseout
   const resetImageSize = (img) => {
     img.style.transform = 'scale(1)';
-    img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out
+    img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out.
+  
 };
   
-  
+/* 
 // Function to create HTML content for image information
 const createImageInfoHTML = (img) => `
   <p>Title: ${img.title}</p>
@@ -176,7 +179,7 @@ const hideImageInfo = () => {
   const infoContainer = document.getElementById('id-ph1');
   infoContainer.innerHTML = ''; // Clear the information
 };
-
+*/
 //calls the functions in the necessary order
 
 getArt().then(() => {
