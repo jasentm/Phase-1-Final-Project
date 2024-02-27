@@ -35,11 +35,33 @@ fetch('http://localhost:3000/journals')
         
         entryText.addEventListener('click', (e) => {
             e.preventDefault()
-            pastEntry.style.display = 'block'
+
+            const divHistory = document.getElementById("prior-entry");
+            const para1 = document.getElementById('prior-date');
+            const colorBox = document.getElementById("prior-color");
+            const para2 = document.getElementById('prior-mood');
+            const para3 = document.getElementById('priorj-entry');
+            const para4 = document.getElementById('prior-inspir');
+
+            console.log(para1)
+
+            para1.textContent = journal.date;
+            colorBox.style.width = '250px';
+            colorBox.style.height = '20px';
+            colorBox.style.backgroundColor = journal.moodColor;
+            colorBox.style.border = "1px solid black";
+            colorBox.style.margin = "5px";
+            colorBox.textContent = "";
+            para2.textContent = journal.mood;
+            para3.textContent = journal.entry;
+            para4.textContent = journal.futureInspo;
+
+            console.log(para1)
+            /*pastEntry.style.display = 'block'
 
             previousMood.textContent = journal.mood
             previousJournal.textContent = journal.entry
-            previousInspo.textContent = journal.futureInspo
+            previousInspo.textContent = journal.futureInspo*/
         })
 
 
@@ -112,57 +134,20 @@ journalForm.addEventListener('submit', (e) => {
 
         //click event on link preventing reload 
         //WE NEED THIS TO DO SOMETHING ELSE 
-        newEntryText.addEventListener('mouseover', (e) => {
-            e.preventDefault()
-            const divHistory = document.getElementById("history");
-            const para1 = document.createElement('p');
-            const colorBox = document.createElement("div");
-            const para2 = document.createElement('p');
-            const para3 = document.createElement('p');
-            const para4 = document.createElement('p');
-
-
-            para1.textContent = e.target.date;
-            colorBox.style.width = '250px';
-            colorBox.style.heigth = '75px';
-            colorBox.style.backgroundColor = e.target.moodColor;
-            colorBox.style.border = "1px solid black";
-            colorBox.style.margin = "5px";
-            para2.textContent = e.target.mood;
-            para3.textContent = e.target.entry;
-            para4.textContent = e.target.futureInspo;
-
-            divHistory.appendChild(para1);
-            divHistory.appendChild(para2);
-            divHistory.appendChild(colorBox);
-            divHistory.appendChild(para3);
-            divHistory.appendChild(para4);
-
+        /*    const entryText = document.getElementsByClassName("entry-text")
+            entryText.addEventListener('click', (e) => {
             
+            e.preventDefault()
+            
+
+                        
             //pastEntry.style.display = 'block'
             //previousMood.textContent = newJournalEntry.mood
             //previousJournal.textContent = newJournalEntry.entry
             //previousInspo.textContent = newJournalEntry.futureInspo
         })
-
-        newEntryText.addEventListener('mouseout', (e) => {
-            e.preventDefault()
-
-            const divHistory = getElementById ('history');
-
-            divHistory.innerHTML = '';
-
-        
-            newEntryText.addEventListener('click', (e) => {
-            e.preventDefault()
-            
-            //pastEntry.style.display = 'block'
-            //previousMood.textContent = newJournalEntry.mood
-            //previousJournal.textContent = newJournalEntry.entry
-            //previousInspo.textContent = newJournalEntry.futureInspo
-        })
-    })
-
+    
+*/
 
 
 //fetch and append quote from past self to DOM

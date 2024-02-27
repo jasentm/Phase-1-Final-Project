@@ -36,7 +36,7 @@ header {
 #bottom-render {
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-height: 75%;
   height: 500px;
   /* //overflow-x: auto; */
