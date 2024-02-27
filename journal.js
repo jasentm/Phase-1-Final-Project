@@ -102,6 +102,14 @@ journalForm.addEventListener('submit', (e) => {
         e.target.querySelector('#journal').value = ''
         e.target.querySelector('#futureInspo').value = ''
 
+
+
+
+    })
+    .catch((error => console.error(error)))
+})
+
+
         //click event on link preventing reload 
         //WE NEED THIS TO DO SOMETHING ELSE 
         newEntryText.addEventListener('mouseover', (e) => {
@@ -153,15 +161,7 @@ journalForm.addEventListener('submit', (e) => {
             //previousJournal.textContent = newJournalEntry.entry
             //previousInspo.textContent = newJournalEntry.futureInspo
         })
-
-
     })
-    .catch((error => console.error(error)))
-})
-})
-
-
-
 
 
 
