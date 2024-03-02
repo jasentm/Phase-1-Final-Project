@@ -1,44 +1,34 @@
 {
-  "ramens": [
+  "journals": [
     {
       "id": "1",
-      "name": "Shoyu Ramen",
-      "restaurant": "Nonono",
-      "image": "./assets/ramen/shoyu.jpg",
-      "rating": 7,
-      "comment": "Delish. Can't go wrong with a classic!"
+      "date": "02-28-24",
+      "mood": "Happy",
+      "entry": "Today was great! I had a turkey sandwich for lunch."
     },
     {
       "id": "2",
-      "name": "Naruto Ramen",
-      "restaurant": "Naruto",
-      "image": "./assets/ramen/naruto.jpg",
-      "rating": 10,
-      "comment": "My absolute fave!"
+      "date": "02-29-24",
+      "mood": "Angry",
+      "entry": "Today was awful! Javascript is so hard!"
     },
     {
-      "id": "3",
-      "name": "Nirvana Shiromaru",
-      "restaurant": "Ippudo",
-      "image": "./assets/ramen/nirvana.jpg",
-      "rating": "7",
-      "comment": "Do buy the hype."
+     "id": "3",
+      "date": "03-01-24",
+      "mood": "Happy",
+      "entry": "Today was great! It's Friday!"
     },
     {
-      "id": "4",
-      "name": "Gyukotsu Ramen",
-      "restaurant": "Za-Ya Ramen",
-      "image": "./assets/ramen/gyukotsu.jpg",
-      "rating": 8,
-      "comment": "Good to the last drop."
+     "id": "4",
+      "date": "03-02-24",
+      "mood": "Sad",
+      "entry": "Today was terrible! I stubbed my toe."
     },
     {
       "id": "5",
-      "name": "Kojiro Red Ramen",
-      "restaurant": "Ramen-Ya",
-      "image": "./assets/ramen/kojiro.jpg",
-      "rating": 6,
-      "comment": "Perfect for a cold night."
+      "date": "03-03-24",
+      "mood": "Sad",
+      "entry": "Today was terrible! I have the Sunday Scaries."
     }
   ]
 }
