@@ -1,5 +1,12 @@
 # Daily Inspiration
+A board of inspirational images and quotes that changes daily to inspire you to journal and reflect.
 
+## User Story
+As a user I will be able to:
+- See randomly generated images of Art and Astronomical phenomena that change every day
+- Read a randomly generated inspirational quote that changes every day
+- Enter my mood for the day, write a journal entry, and write something inspirational to my future self
+- View previous journal submissions
 
 ## List of APIs 
 https://docs.zenquotes.io/zenquotes-documentation/#call-quotes
@@ -34,7 +41,8 @@ https://metmuseum.github.io/
 - mood tracker (color css based on mood) for previous entries
 - mouseover event listener for previous entries
 
-
+## Kanban Board
+https://trello.com/b/bzdZPuOR/phase-1-final-project
 
 
 
