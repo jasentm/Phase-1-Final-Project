@@ -20,9 +20,21 @@ https://metmuseum.github.io/
 
 
 ## List of Event Listeners
--Click
--Submit
--MouseOver
+- Click
+- Submit
+- MouseOver
+
+## Iterator
+- Iterate over journal entries to append to the DOM
+
+## Stretch Goals
+- Weather widget based on location
+- Input field to inspire future self
+- Append inspiration to DOM from past self
+- mood tracker (color css based on mood) for previous entries
+- mouseover event listener for previous entries
+
+
 
 
 
