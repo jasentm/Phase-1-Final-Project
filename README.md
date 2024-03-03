@@ -2,7 +2,7 @@
 A board of inspirational images and quotes that changes daily to inspire you to journal and reflect.
 
 ## Wireframe
-<img src="./assets/User Story.png">
+<img src="./assets/Wire Frame.png">
 
 ## User Story
 As a user I will be able to:
@@ -11,7 +11,7 @@ As a user I will be able to:
 - Enter my mood for the day, write a journal entry, and write something inspirational to my future self
 - View previous journal submissions
 
-<img src="./assets/Wire Frame.png">
+<img src="./assets/User Story.png">
 
 ## List of APIs 
 https://docs.zenquotes.io/zenquotes-documentation/#call-quotes
