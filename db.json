@@ -3,35 +3,35 @@
     {
       "id": "1",
       "date": "02-28-24",
-      "mood-color": "#fff700",
+      "moodColor": "#f7ec73",
       "mood": "Happy",
       "entry": "Today was great! I had a turkey sandwich for lunch."
     },
     {
       "id": "2",
       "date": "02-29-24",
-      "mood-color": "#ff0000", 
+      "moodColor": "#d53434", 
       "mood": "Angry",
       "entry": "Today was awful! Javascript is so hard!"
     },
     {
      "id": "3",
       "date": "03-01-24",
-      "mood-color": "#fff700",
+      "moodColor": "#f7ec73",
       "mood": "Happy",
       "entry": "Today was great! It's Friday!"
     },
     {
      "id": "4",
       "date": "03-02-24",
-      "mood-color": "#004cff",
+      "moodColor": "#403df5",
       "mood": "Sad",
       "entry": "Today was terrible! I stubbed my toe."
     },
     {
       "id": "5",
       "date": "03-03-24",
-      "mood-color": "#004cff",
+      "moodColor": "#403df5",
       "mood": "Sad",
       "entry": "Today was terrible! I have the Sunday Scaries."
     }

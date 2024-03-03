@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./fetch.js"></script>
     <script defer src="./astronomy.js"></script>
     <script defer src="./art.js"></script>
     <script defer src="./quotes.js"></script>
@@ -12,6 +11,9 @@
     <title>Daily Inspiration</title>
 </head>
 <body>
+    <div id="art"></div>
+    <div id="quote"></div>
+    <div id="astronomy"></div>
     <form id="journal-form">
         <h2>My Daily Journal</h2>
         <label for="date">What's today's date?</label>
@@ -21,7 +23,7 @@
         <label for="mood">What's your mood today?</label>
         <input type="text" name="mood_today" id="mood" />
         <label for="journal">Write it out!</label>
-        <input type='text' name="journal_entry" id="journal" />
+        <textarea name="journal_entry" id="journal"></textarea>
         <input type="submit" id="submit-button" value="Submit!" />
     </form>
     <div id="journal-board"></div>
