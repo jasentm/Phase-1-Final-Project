@@ -1,12 +1,17 @@
 # Daily Inspiration
 A board of inspirational images and quotes that changes daily to inspire you to journal and reflect.
 
+## Wireframe
+<img src="/Users/jasenmiyamoto/Development/Code/Phase-1/Phase-1-Final-Project/Phase-1-Final-Project/assets/User Story.png">
+
 ## User Story
 As a user I will be able to:
 - See randomly generated images of Art and Astronomical phenomena that change every day
 - Read a randomly generated inspirational quote that changes every day
 - Enter my mood for the day, write a journal entry, and write something inspirational to my future self
 - View previous journal submissions
+
+<img src="/Users/jasenmiyamoto/Development/Code/Phase-1/Phase-1-Final-Project/Phase-1-Final-Project/assets/User Story.png">
 
 ## List of APIs 
 https://docs.zenquotes.io/zenquotes-documentation/#call-quotes
