@@ -13,7 +13,7 @@ fetch('http://localhost:3000/journals')
 })
 .then((journalData) => {
     journalData.forEach((journal) => {
-        //make a div for each entry and give class name for CSS and id based on db id
+        //makes a div for each entry and give class name for CSS and id based on db id
         const entryDiv = document.createElement('div')
 
         entryDiv.className = 'entry-box'
@@ -21,7 +21,7 @@ fetch('http://localhost:3000/journals')
         entryDiv.style.backgroundColor = journal.moodColor
         journalBoard.appendChild(entryDiv)
         
-        //make entry "link" to go inside of each entry box
+        //makes entry "link" to go inside of each entry box
         let entryText = document.createElement('a')
 
         entryText.setAttribute('href','')
@@ -40,13 +40,20 @@ fetch('http://localhost:3000/journals')
 
 journalForm.addEventListener('submit', (e) => {
     e.preventDefault()
+    const dateYearFirst = e.target.querySelector('#date').value
+
+    //reformat date
+    const dateParts = dateYearFirst.split('-')
+    const correctDate = `${dateParts[1]}-${dateParts[2]}-${dateParts[0].slice(-2)}`
+
+    //POST fetch request
     fetch('http://localhost:3000/journals', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        date: e.target.querySelector('#date').value,
+        date: correctDate,
         moodColor: e.target.querySelector('#mood-color').value,
         mood: e.target.querySelector('#mood').value,
         entry: e.target.querySelector('#journal').value
@@ -60,8 +67,9 @@ journalForm.addEventListener('submit', (e) => {
         }
     })
     .then(newJournalEntry => {
+        //create and append new entry onto DOM
         const newEntryDiv = document.createElement('div')
-//DATE IS BEING ENTERED AS YYYY-MM-DD FIX THIS 
+
         newEntryDiv.className = 'entry-box'
         newEntryDiv.id = newJournalEntry.id
         newEntryDiv.style.backgroundColor = newJournalEntry.moodColor
