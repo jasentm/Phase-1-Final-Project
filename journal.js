@@ -1,6 +1,3 @@
-//HI FRIENDS!!! 
-
-
 //global variables
 const journalForm = document.getElementById('journal-form')
 const journalBoard = document.getElementById('journal-board')
