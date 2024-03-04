@@ -1,12 +1,5 @@
 //fetch list of departments
 
-
-
-
-
-
-
-xyz
 // const getDepartments = () => {
 //      fetch('https://collectionapi.metmuseum.org/public/collection/v1/departments')
 //      .then(res => res.json())
@@ -45,6 +38,7 @@ const selectArtwork = () => {
   const selectedArtwork = imageIdsByDept[randomIndex];
 
   console.log('Selected Artwork:', selectedArtwork);
+  return selectedArtwork;
 }
 
 //calls the functions and sets hierarchy
@@ -57,3 +51,15 @@ getImageIds().then(() => {
 });
 
 //need to render the 'selectedArtwork' to display on the page
+const renderArtwork = (selectArtwork) => {
+  let imgId = document.querySelector('#id phi')
+  let imgSrc =  
+}
+
+const fetchAndLogArtDetails = (selectArtwork) => {
+fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/${selectedArtwork}')
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
+}
