@@ -30,6 +30,30 @@ https://metmuseum.github.io/
 "url": "https://apod.nasa.gov/apod/image/2403/IM_Odysseus_landing-1100x600.png"
 }
 
+{
+  "journals": [
+    {
+      "id": "1",
+      "date": "02-28-24",
+      "moodColor": "#f7ec73",
+      "mood": "Happy",
+      "entry": "Today was great! I had a turkey sandwich for lunch."
+    },
+    {
+      "id": "2",
+      "date": "02-29-24",
+      "moodColor": "#d53434", 
+      "mood": "Angry",
+      "entry": "Today was awful! Javascript is so hard!"
+    },
+    {
+     "id": "3",
+      "date": "03-01-24",
+      "moodColor": "#f7ec73",
+      "mood": "Happy",
+      "entry": "Today was great! It's Friday!"
+    },
+
 
 ## List of Event Listeners
 - Click
