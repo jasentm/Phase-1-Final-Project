@@ -8,7 +8,7 @@ A board of inspirational images and quotes that changes daily to inspire you to 
 As a user I will be able to:
 - See randomly generated images of Art and Astronomical phenomena that change every day
 - Read a randomly generated inspirational quote that changes every day
-- Enter my mood for the day, write a journal entry, and write something inspirational to my future self
+- Enter my mood for the day, a color associated with it, and write a daily journal entry
 - View previous journal submissions
 
 <img src="./assets/User Story.png">
