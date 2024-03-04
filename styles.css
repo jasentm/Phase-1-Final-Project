@@ -88,7 +88,6 @@ header {
     flex-direction: column;
     align-items: flex-start;
 }
-}
 
   input,
   textarea {
@@ -113,14 +112,15 @@ input[type="submit"]:active {
 }
 
 #journal-board {
-  input,
-  textarea {
-  font-size: 1rem;
-  border: 1px solid black;
-  background-color: white;
-  padding: 0.5rem;
-  margin: 0.25rem 0;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  width: 313px;
+  position: relative;
+  left: 400px;
+  bottom: 320px;
+  border-style: groove;
+
 }
 
 input[type="submit"] {
@@ -134,7 +134,7 @@ input[type="submit"] {
 input[type="submit"]:active {
   background-color: gray;
 }
-/*
+
 #journal-board {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -155,28 +155,18 @@ form h4 {
     background-color: black;
 }
 }
-*/
-form h4 {
-    width: 100%;
-    padding: 0.25rem;
-    margin: 0.5rem 0;
-    color: white;
-    background-color: black;
-}
 
-.entry-box {
+
 .entry-box {
     background-color: rgb(82, 212, 216);
     height: 100px;
     width: 100px;
 }
-}
 
-.entry-text {
+
 .entry-text {
     padding: 10px;
     line-height: 6.5em;
     background-color: aliceblue;
     opacity: 60%;
-}
 }
