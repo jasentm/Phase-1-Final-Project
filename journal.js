@@ -1,4 +1,4 @@
-//HI FRIENDS!!! 
+//HELLO FRIENDS!!! 
 
 
 //global variables
