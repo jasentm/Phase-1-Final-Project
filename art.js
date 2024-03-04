@@ -43,23 +43,38 @@ const selectArtwork = () => {
 
 //calls the functions and sets hierarchy
 
+//need to render the 'selectedArtwork' to display on the page
+
+
+// const fetchAndLogArtDetails = (selectedArtwork) => {
+// fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/${selectedArtwork}/')
+// .then(res => {
+//   if (res.ok){
+//       return res.json()
+//   }else {
+//       console.error("Something went wrong...")
+//   }
+// })
+   
+// .then((response) => response.text())
+//   .then((result) => console.log(result))
+//   .catch((error) => console.error(error));
+//     }
+  
+
+
+const renderArtwork = (selectedArtwork) => {
+  let img = document.getElementById('id-ph1')
+  
+  img.src = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${selectedArtwork}/primaryImage`;
+  img.alt = 'Artwork'
+};
+
 getImageIds().then(() => {
   console.log('getImageIds called successfully.');
   // After fetching image IDs, call selectArtwork
-  selectArtwork();
+  const selectedArtwork = selectArtwork();
+  //fetchAndLogArtDetails(selectedArtwork);
+  renderArtwork(selectedArtwork);
 
 });
-
-//need to render the 'selectedArtwork' to display on the page
-const renderArtwork = (selectArtwork) => {
-  let imgId = document.querySelector('#id phi')
-  let imgSrc =  
-}
-
-const fetchAndLogArtDetails = (selectArtwork) => {
-fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/${selectedArtwork}')
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-
-}
