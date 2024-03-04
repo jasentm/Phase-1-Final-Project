@@ -23,4 +23,6 @@ form {
   .entry-text {
     padding: 10px;
     line-height: 5em;
+    background-color: aliceblue;
+    opacity: 60%;
   }
