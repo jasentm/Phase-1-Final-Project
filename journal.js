@@ -1,6 +1,10 @@
 //global variables
 const journalForm = document.getElementById('journal-form')
 const journalBoard = document.getElementById('journal-board')
+const pastEntry = document.getElementById('past-entry')
+const previousMood = document.getElementById('previous-mood')
+const previousJournal = document.getElementById('previous-journal')
+const previousInspo = document.getElementById('previous-inspo')
 
 //get and render journal entries from db.json to journal-board
 fetch('http://localhost:3000/journals')
@@ -20,7 +24,7 @@ fetch('http://localhost:3000/journals')
         entryDiv.id = journal.id
         entryDiv.style.backgroundColor = journal.moodColor
         journalBoard.appendChild(entryDiv)
-        
+
         //makes entry "link" to go inside of each entry box
         let entryText = document.createElement('a')
 
@@ -31,6 +35,11 @@ fetch('http://localhost:3000/journals')
         
         entryText.addEventListener('click', (e) => {
             e.preventDefault()
+            pastEntry.style.display = 'block'
+
+            previousMood.textContent = journal.mood
+            previousJournal.textContent = journal.entry
+            previousInspo.textContent = journal.futureInspo
         })
 
 
@@ -85,8 +94,22 @@ journalForm.addEventListener('submit', (e) => {
         newEntryText.textContent = newJournalEntry.date
         newEntryDiv.appendChild(newEntryText)
         
+        //clear fields on submit 
+        e.target.querySelector('#date').value = ''
+        e.target.querySelector('#mood-color').value = ''
+        e.target.querySelector('#mood').value = ''
+        e.target.querySelector('#journal').value = ''
+        e.target.querySelector('#futureInspo').value = ''
+
+        //click event on link preventing reload 
+        //WE NEED THIS TO DO SOMETHING ELSE 
         newEntryText.addEventListener('click', (e) => {
             e.preventDefault()
+            pastEntry.style.display = 'block'
+
+            previousMood.textContent = newJournalEntry.mood
+            previousJournal.textContent = newJournalEntry.entry
+            previousInspo.textContent = newJournalEntry.futureInspo
         })
 
 
@@ -105,16 +128,16 @@ fetch('http://localhost:3000/journals')
     }
 })
 .then((data) => {
-    //get array of futureInspo quotes
+    //gets array of futureInspo quotes
     const futureInspoQuotes = data.map(journal => journal.futureInspo)
 
-    // Generate a random index to select a quote
+    //generates a random index to select a quote
     const randomIndex = Math.floor(Math.random() * futureInspoQuotes.length)
     
-    // Select a random futureInspo quote using the random index
+    //selects a random futureInspo quote using the random index
     const randomFutureInspo = futureInspoQuotes[randomIndex]
     
-    // Render the randomFutureInspo quote to the DOM
+    //renders the randomFutureInspo quote to the DOM
     const quoteContainer = document.getElementById('quote-container')
     console.log(quoteContainer)
     quoteContainer.textContent = `"${randomFutureInspo}"`;

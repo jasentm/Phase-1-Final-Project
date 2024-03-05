@@ -55,6 +55,14 @@
       "mood": "Calm",
       "entry": "Today was perfectly normal",
       "futureInspo": "You deserve a little treat! Treat yourself!"
+    },
+    {
+      "id": "228c",
+      "date": "03-06-24",
+      "moodColor": "#cdd0f9",
+      "mood": "Rested",
+      "entry": "I got 9 hours of sleep last night!",
+      "futureInspo": "You're a bright light for everyone around you!"
     }
   ]
 }

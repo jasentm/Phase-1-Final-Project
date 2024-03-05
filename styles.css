@@ -38,8 +38,7 @@ header {
   height: 300px;
   max-width: 400px;
   margin-right: 0.5rem;
-  padding-top: 100px;
-  font-size: x-large;
+  cursor: pointer;
   
 }
 

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./astronomy.js"></script>
     <script defer src="./art.js"></script>
+    <script defer src="./astronomy.js"></script>
+    <script defer src="./nature.js"></script>
     <script defer src="./quotes.js"></script>
     <script defer src="./journal.js"></script>
     <title>Daily Inspiration</title>
@@ -13,14 +14,12 @@
 <body>
     <div id="top-render">
         <img id= "id-ph1" class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-        <div id= "id-ph2" class="detail-image"></div>
+        <img id= "id-ph2" class="detail-image" src="https://source.unsplash.com/random/300x300?nature" alt="Random Nature Image" />
         <img id= "id-ph3" class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
     </div>
-
-    <div id="inspr-quote">
-        <h2 class="diplay quote">A Quote from Past You:</h2>
-        <h3 id="quote-container"></h4>
-    
+    <br/>
+    <div id="quote"></div>
+   
     </div>
  
         <form id="journal-form">
@@ -37,6 +36,18 @@
         <textarea name="future_inspo" id="futureInspo"></textarea>
         <input type="submit" id="submit-button" value="Submit!" />
     </form>
-    <div id="journal-board"></div>
+    <div id="inspr-quote">
+        <h2 class="diplay quote">A Quote from Past You:</h2>
+        <h3 id="quote-container"></h4>
+    <div id="journal-board">
+        <div id="past-entry" style="display: none;">
+            <h3>Mood:</h3>
+            <p id="previous-mood">Insert Mood Here</p>
+            <h3>Journal Entry:</h3>
+            <p id="previous-journal">Insert Entry Here</p>
+            <h3>Future Inspiration:</h3>
+            <p id="previous-inspo"></p>
+        </div>
+    </div>
 </body>
 </html>
