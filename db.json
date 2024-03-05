@@ -5,49 +5,56 @@
       "date": "02-28-24",
       "moodColor": "#f7ec73",
       "mood": "Happy",
-      "entry": "Today was great! I had a turkey sandwich for lunch."
+      "entry": "Today was great! I had a turkey sandwich for lunch.",
+      "futureInspo": "Hang in there - I know you can do it!"
     },
     {
       "id": "2",
       "date": "02-29-24",
       "moodColor": "#d53434",
       "mood": "Angry",
-      "entry": "Today was awful! Javascript is so hard!"
+      "entry": "Today was awful! Javascript is so hard!",
+      "futureInspo": "All things must come to an end, be they good or bad."
     },
     {
       "id": "3",
       "date": "03-01-24",
       "moodColor": "#f7ec73",
       "mood": "Happy",
-      "entry": "Today was great! It's Friday!"
+      "entry": "Today was great! It's Friday!",
+      "futureInspo": "You're a superstar - don't forget it!"
     },
     {
       "id": "4",
       "date": "03-02-24",
       "moodColor": "#403df5",
       "mood": "Sad",
-      "entry": "Today was terrible! I stubbed my toe."
+      "entry": "Today was terrible! I stubbed my toe.",
+      "futureInspo": "You made someone smile today :)"
     },
     {
       "id": "5",
       "date": "03-03-24",
       "moodColor": "#403df5",
       "mood": "Sad",
-      "entry": "Today was terrible! I have the Sunday Scaries."
+      "entry": "Today was terrible! I have the Sunday Scaries.",
+      "futureInspo": "A big change is coming - believe!"
     },
     {
       "id": "9101",
       "date": "03-04-24",
       "moodColor": "#e89292",
       "mood": "Excited",
-      "entry": "Today was lovely!"
+      "entry": "Today was lovely!",
+      "futureInspo": "Remember all the good times you've had."
     },
     {
       "id": "6c3d",
       "date": "03-05-24",
       "moodColor": "#b4f9e8",
       "mood": "Calm",
-      "entry": "Today was perfectly normal"
+      "entry": "Today was perfectly normal",
+      "futureInspo": "You deserve a little treat! Treat yourself!"
     }
   ]
 }
