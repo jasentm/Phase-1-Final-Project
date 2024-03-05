@@ -145,7 +145,7 @@ img.addEventListener('mouseout', () => {
   const enlargeImage = (img) => {
     img.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
     img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
-
+    
 };
 
 
@@ -156,7 +156,7 @@ img.addEventListener('mouseout', () => {
   const resetImageSize = (img) => {
     img.style.transform = 'scale(1)';
     img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out.
-  
+    
 };
   
 /* 

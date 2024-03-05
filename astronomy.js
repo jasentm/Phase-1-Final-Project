@@ -27,9 +27,10 @@ const renderSpace = (response) => {
 
 const hoverRender = (e) => {
   e.preventDefault()
-
-  imgSpace.classList.remove('detail-image2');
-  imgSpace.classList.add('img-enlarged');
+  imgSpace.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
+  imgSpace.style.transition = 'transform 0.3s'; // Add a smooth transition effect
+  // imgSpace.classList.remove('detail-image2');
+  // imgSpace.classList.add('img-enlarged');
 
   //const imgDiv = document.getElementById('id-3');
   //const para = document.createElement('p');
@@ -44,9 +45,10 @@ const outRender = (e) => {
   e.preventDefault()
 
   //const para = document.getElementById("removable-para")
-
-  imgSpace.classList.remove('img-enlarged');
-  imgSpace.classList.add('detail-image2');
+ imgSpace.style.transform = 'scale(1)';
+  imgSpace.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out
+  // imgSpace.classList.remove('img-enlarged');
+  // imgSpace.classList.add('detail-image2');
 
   //if (para) {para.remove();
   //}

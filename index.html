@@ -11,19 +11,25 @@
     <script defer src="./journal.js"></script>
     <title>Daily Inspiration</title>
 </head>
-<body>
-    <div id="id-1">
-        <img id= "id-ph1" class="detail-image1" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-    </div>
-        <img id= "id-ph2" class="detail-image" src="https://source.unsplash.com/random/300x300?nature" alt="Random Nature Image" />
-    </div id= "id-3">
-        <img id= "id-ph3" class="detail-image2" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-    </div>
+<>
+    <div id = 'top-render'>
+        <div id="id-1">
+            <img id= "id-ph1" class="detail-image1" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+        </div>
+        <div id = "id-2">
+            <img id= "id-ph2" class="detail-image" src="https://source.unsplash.com/random/300x300?nature" alt="Random Nature Image" />
+        </div>
+        <div id= "id-3">
+            <img id= "id-ph3" class="detail-image2" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+        </div>
+</div>
+
     <br/>
+    
     <div id="quote"></div>
    
-    </div>
- 
+    
+ <div  id ="bottom-render">
         <form id="journal-form">
         <h2>My Daily Journal</h2>
         <label for="date">What's today's date?</label>
@@ -38,9 +44,11 @@
         <textarea name="future_inspo" id="futureInspo"></textarea>
         <input type="submit" id="submit-button" value="Submit!" />
     </form>
-    <div id="inspr-quote">
+
+    <!-- <div id="inspr-quote">
         <h2 class="diplay quote">A Quote from Past You:</h2>
-        <h3 id="quote-container"></h4>
+        <h3 id="quote-container"></h3>
+    </div> -->
     <div id="journal-board">
         <div id="past-entry" style="display: none;">
             <h3>Mood:</h3>
@@ -50,6 +58,12 @@
             <h3>Future Inspiration:</h3>
             <p id="previous-inspo"></p>
         </div>
+    </div>
+
+</div>
+    <div id="inspr-quote">
+        <h2 class="diplay quote">A Quote from Past You:</h2>
+        <h3 id="quote-container"></h3>
     </div>
 </body>
 </html>

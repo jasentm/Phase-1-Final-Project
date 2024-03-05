@@ -8,7 +8,7 @@ body {
   padding: 1rem;
   text-align: center;
   background-color: #fafafa;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -22,8 +22,30 @@ header {
 }
 
 #top-render {
-  display: flex;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  /* //overflow-x: auto; */
   margin: 1rem 0;
+  /* max-width: calc(100vw - 2rem); */ 
+  align-items: center;
+  justify-content: center;
+}
+
+#bottom-render {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 75%;
+  height: 500px;
+  /* //overflow-x: auto; */
+  margin: 1rem 0;
+  /* max-width: calc(100vw - 2rem); */ 
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
 }
 
 #id-ph1 {
@@ -31,6 +53,7 @@ header {
   height: 300px;
   margin-right: 0.5rem;
   cursor: pointer;
+  max-width: 425px;
 }
 
 #id-ph2 {
@@ -47,45 +70,41 @@ header {
   height: 300px;
   margin-right: 0.5rem;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-enlarged {
   position:fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 90%;
+  transform: translate(-50%, -50%); */
+  /* max-width: 90%;
+  max-height: 90%; */
   z-index: 10
+  
 }
 
-#top-render img:last-child {
-  margin-right: 0;
+.img2-enlarged {
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: scale(1.5) translate(-50%, -50%);
+   */
+  /* max-width: 90%;
+  max-height: 90%; */
+  z-index: 10
+
 }
+
+/* #top-render img:last-child {
+  margin-right: 0;
+} */
 
 #inspr quote {
   position: relative;
 }
 
-.detail-image {
-  height: 350px;
-}
-
-.name,
-.restaurant {
-  position: absolute;
-  left: 10px;
-  padding: 0.25rem 5rem 0.25rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.name {
-  bottom: 60px;
-}
-
-.restaurant {
-  bottom: 20px;
-}
 
 #form-div {
   display: grid;
@@ -96,7 +115,10 @@ header {
     width: 311px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
   input,
@@ -104,7 +126,7 @@ header {
   font-size: 1rem;
   border: 1px solid black;
   background-color: white;
-  /* padding: 0.5rem; */
+  padding: 0.5rem;
   margin: 0.25rem 0;
   width: 100%;
 }
@@ -127,8 +149,8 @@ input[type="submit"]:active {
   gap: 5px;
   width: 313px;
   position: relative;
-  left: 450px;
-  bottom: 375px;
+  /* left: 450px;
+  bottom: 375px; */ */
   border-style: groove;
 
 }
