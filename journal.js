@@ -2,7 +2,7 @@
 const journalForm = document.getElementById('journal-form')
 const journalBoard = document.getElementById('journal-board')
 
-//get and render journal entries from db.json
+//get and render journal entries from db.json to journal-board
 fetch('http://localhost:3000/journals')
 .then(res => {
     if (res.ok){
@@ -38,11 +38,13 @@ fetch('http://localhost:3000/journals')
 })
 .catch((error => console.error(error)))
 
+
+//makes journal form work, POST to db.json, and render on DOM
 journalForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const dateYearFirst = e.target.querySelector('#date').value
 
-    //reformat date
+    //reformat date from YYYY-MM-DD to MM-DD-YY
     const dateParts = dateYearFirst.split('-')
     const correctDate = `${dateParts[1]}-${dateParts[2]}-${dateParts[0].slice(-2)}`
 
@@ -56,7 +58,8 @@ journalForm.addEventListener('submit', (e) => {
         date: correctDate,
         moodColor: e.target.querySelector('#mood-color').value,
         mood: e.target.querySelector('#mood').value,
-        entry: e.target.querySelector('#journal').value
+        entry: e.target.querySelector('#journal').value,
+        futureInspo: e.target.querySelector('#futureInspo').value
     }),
 })
     .then(res => {
@@ -90,3 +93,30 @@ journalForm.addEventListener('submit', (e) => {
     })
     .catch((error => console.error(error)))
 })
+
+
+//fetch and append quote from past self to DOM
+fetch('http://localhost:3000/journals')
+.then(res => {
+    if (res.ok){
+        return res.json()
+    }else {
+        console.error("Something went wrong...")
+    }
+})
+.then((data) => {
+    //get array of futureInspo quotes
+    const futureInspoQuotes = data.map(journal => journal.futureInspo)
+
+    // Generate a random index to select a quote
+    const randomIndex = Math.floor(Math.random() * futureInspoQuotes.length)
+    
+    // Select a random futureInspo quote using the random index
+    const randomFutureInspo = futureInspoQuotes[randomIndex]
+    
+    // Render the randomFutureInspo quote to the DOM
+    const quoteContainer = document.getElementById('quote-container')
+    console.log(quoteContainer)
+    quoteContainer.textContent = `"${randomFutureInspo}"`;
+  })
+  .catch(error => console.error('Error loading data:', error));

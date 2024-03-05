@@ -13,18 +13,16 @@
 <body>
     <div id="top-render">
         <img id= "id-ph1" class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-        <img id= "id-ph2" class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
+        <div id= "id-ph2" class="detail-image"></div>
         <img id= "id-ph3" class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-    
+    </div>
 
     <div id="inspr-quote">
-        <h2 class="diplay quote">Automatically Display Quote from Database</h2>
+        <h2 class="diplay quote">A Quote from Past You:</h2>
+        <h3 id="quote-container"></h4>
     
-    
-    <form id="new-inspr">
-        <h4>Add New Inspirational Message To Future Self</h4>
     </div>
-    </form>
+ 
         <form id="journal-form">
         <h2>My Daily Journal</h2>
         <label for="date">What's today's date?</label>
@@ -35,6 +33,8 @@
         <input type="text" name="mood_today" id="mood" />
         <label for="journal">Write it out!</label>
         <textarea name="journal_entry" id="journal"></textarea>
+        <label for="futureInspo">Inspire Future You!</label>
+        <textarea name="future_inspo" id="futureInspo"></textarea>
         <input type="submit" id="submit-button" value="Submit!" />
     </form>
     <div id="journal-board"></div>
