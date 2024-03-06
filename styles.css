@@ -151,6 +151,7 @@ input[type="submit"]:active {
   /* left: 450px;
   bottom: 375px; */
   border-style: groove;
+  overflow-y: auto;
 
 }
 
