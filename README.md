@@ -13,8 +13,8 @@ As a user I will be able to:
 
 <img src="./assets/User Story.png">
 
-## List of APIs 
-https://docs.zenquotes.io/zenquotes-documentation/#call-quotes
+## List of APIs / Data Examples
+https://github.com/lukePeavey/quotable?tab=readme-ov-file#get-random-quotes
 
 https://github.com/nasa/apod-api (NEEDS KEY)
 
@@ -56,9 +56,9 @@ https://metmuseum.github.io/
 
 
 ## List of Event Listeners
-- Click
-- Submit
-- MouseOver
+- Click on Journal Board will display previous entry
+- Submit form will save form data to db.json and render into Journal Board
+- Mouseover/Mouseout will enlarge the images from APIs and display information about each image
 
 ## Iterator
 - Iterate over journal entries to append to the DOM
