@@ -7,7 +7,7 @@
 body {
   padding: 1rem;
   text-align: center;
-  background-color: #fafafa;
+  background-image: linear-gradient(45deg, rgb(121, 197, 186), rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813)); 
   display: block;
   flex-direction: column;
   justify-content: center;
@@ -146,15 +146,15 @@ input[type="submit"]:active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
-  width: 313px;
+  width: 350px;
   position: relative;
+  max-height: 350px;
   /* left: 450px;
   bottom: 375px; */
   border-style: groove;
   overflow-y: auto;
-
+  
 }
-
 input[type="submit"] {
   color: white;
   border: 1px solid white;
