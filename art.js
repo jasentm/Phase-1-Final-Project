@@ -143,20 +143,22 @@ img.addEventListener('mouseout', () => {
 //   // Function to enlarge the image on mouseover
 
   const enlargeImage = (img) => {
-    img.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
+    img.style.position = 'relative'
+    img.style.transform = 'scale(2.5) translate(30%, 30%)'; // Enlarge the image by 1.5 times
     img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
+    img.style.zIndex = '10';
     
 };
-
 
 
 };
 
   // Function to reset the image size on mouseout
   const resetImageSize = (img) => {
+    img.style.position = 'relative'
     img.style.transform = 'scale(1)';
     img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out.
-    
+    img.style.zIndex = '3'
 };
   
 /* 
