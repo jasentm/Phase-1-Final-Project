@@ -17,6 +17,7 @@ As a user I will be able to:
 https://github.com/lukePeavey/quotable?tab=readme-ov-file#get-random-quotes
 
 https://github.com/nasa/apod-api (NEEDS KEY)
+*Hourly limit of 30 requests per IP Address.  Daily limit of 50 requests per IP Address*
 
 https://metmuseum.github.io/
 

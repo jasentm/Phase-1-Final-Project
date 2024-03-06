@@ -36,6 +36,7 @@ fetch('http://localhost:3000/journals')
         entryText.addEventListener('click', (e) => {
             e.preventDefault()
 
+            //appending journal entry to prior entry div on click
             const para1 = document.getElementById('prior-date');
             const colorBox = document.getElementById("prior-color");
             const para2 = document.getElementById('prior-mood');
@@ -53,12 +54,7 @@ fetch('http://localhost:3000/journals')
             para3.textContent = journal.entry;
             para4.textContent = journal.futureInspo;
 
-            /*pastEntry.style.display = 'block'
-
-            previousMood.textContent = journal.mood
-            previousJournal.textContent = journal.entry
-            previousInspo.textContent = journal.futureInspo*/
-
+            //dynamically change background color based on journal entry clicked
             let backgroundMoodColor = entryDiv.style.backgroundColor;
         
             // Select the body element
@@ -67,19 +63,6 @@ fetch('http://localhost:3000/journals')
             // Set the background color dynamically
             body.style.backgroundImage = 'linear-gradient(45deg, ' + backgroundMoodColor + ',  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813)';
         })
-        // const changeBackground = () => {
-
-        //     let backgroundMoodColor = entryDiv.style.backgroundColor;
-        
-        //     // Select the body element
-        //     let body = document.body;
-          
-        //     // Set the background color dynamically
-        //     body.style.backgroundImage = 'linear-gradient(45deg, ' + backgroundMoodColor + ', grey, black, black, black, black)';
-        //   }
-        
-        //   changeBackground();
-
     })
 })
 .catch((error => console.error(error)))
@@ -142,6 +125,7 @@ journalForm.addEventListener('submit', (e) => {
         newEntryText.addEventListener('click', (e) => {
             e.preventDefault()
 
+            //appending journal entry to prior entry div on click
             const para1 = document.getElementById('prior-date');
             const colorBox = document.getElementById("prior-color");
             const para2 = document.getElementById('prior-mood');
@@ -159,8 +143,17 @@ journalForm.addEventListener('submit', (e) => {
             para3.textContent = newJournalEntry.entry;
             para4.textContent = newJournalEntry.futureInspo;
 
+            //dynamically change background color on click
+            let backgroundMoodColor = newEntryDiv.style.backgroundColor;
+        
+            // Select the body element
+            let body = document.body;
+          
+            // Set the background color dynamically
+            body.style.backgroundImage = 'linear-gradient(45deg, ' + backgroundMoodColor + ',  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813)';
+
          })
-    //.catch((error => console.error(error)))
+    .catch((error => console.error(error)))
     })
 })
 

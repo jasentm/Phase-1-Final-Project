@@ -63,6 +63,14 @@
       "mood": "Rested",
       "entry": "I got 9 hours of sleep last night!",
       "futureInspo": "You're a bright light for everyone around you!"
+    },
+    {
+      "id": "9925",
+      "date": "03-07-24",
+      "moodColor": "#e948f4",
+      "mood": "Zany",
+      "entry": "sakjng;okanrfo;a",
+      "futureInspo": "YOU DID IT! THE PROJECT IS DONE!"
     }
   ]
 }

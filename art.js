@@ -94,59 +94,25 @@ const renderArtwork = (response) => {
   img.src = response.primaryImage;
   img.alt = 'Artwork';
   img.title = `Artist:${response.artistDisplayName} \n Date:${response.objectDate} \n Title: ${response.title} \n URL:${response.objectURL}`;
-  // img.artist = response.artistDisplayName;
-  // img.date = response.objectDate;
-  // img.url = response.objectURL;
-
-
-//Event Listeners
-/*
-img.addEventListener('mouseover', () => {
-  img.style.transform = 'scale(1.5)'; // Enlarge the image by 1.5 times
-  img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
-});
-img.addEventListener('mouseout', () => {
-  img.style.transform = 'scale(1)';
-  img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out
-});
-*/
-
-// getArt().then(() => {
-//   console.log('getImageIds called successfully.');
-//   // After fetching image IDs, call selectArtwork
-//   const selectedArtwork = selectArtwork();
-//   fetchAndLogArtDetails(selectedArtwork);
-
-
-// });
-// }
-///////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
     // Add mouseover event listener that displays artwork info
     
     img.addEventListener('mouseover', () => {
       enlargeImage(img);
-    //  displayImageInfo(response);
     });
   
 //     // Add mouseout event listener to reset the image size and hide info
     img.addEventListener('mouseout', () => {
       resetImageSize(img);
-    //  hideImageInfo();
     });
   
-  
-//   // Function to enlarge the image on mouseover
+// Function to enlarge the image on mouseover
 
   const enlargeImage = (img) => {
     img.style.position = 'relative'
     img.style.transform = 'scale(2.5) translate(30%, 30%)'; // Enlarge the image by 1.5 times
     img.style.transition = 'transform 0.3s'; // Add a smooth transition effect
-    img.style.zIndex = '10';
+    img.style.zIndex = '10'; //Pushes image to front 
     
 };
 
@@ -160,29 +126,6 @@ img.addEventListener('mouseout', () => {
     img.style.transition = 'transform 0.2s';  // Reset the image size when mouse moves out.
     img.style.zIndex = '3'
 };
-  
-/* 
-// Function to create HTML content for image information
-const createImageInfoHTML = (img) => `
-  <p>Title: ${img.title}</p>
-  <p>Artist: ${img.artistDisplayName}</p>
-  <p>Date: ${img.objectDate}</p>
-  <p>URL: ${img.objectURL}</p>
-`;
-
-// Function to display image information at the bottom
-const displayImageInfo = (img) => {
-  const infoContainer = document.getElementById('id-ph1');
-  infoContainer.innerHTML = createImageInfoHTML(img);
-};
-
-// Function to hide image information
-const hideImageInfo = () => {
-  const infoContainer = document.getElementById('id-ph1');
-  infoContainer.innerHTML = ''; // Clear the information
-};
-*/
-//calls the functions in the necessary order
 
 getArt().then(() => {
   console.log('getImageIds called successfully.');

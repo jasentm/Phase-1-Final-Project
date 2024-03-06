@@ -14,21 +14,11 @@ body {
   align-items: center;
 }
 
-header {
-  padding: 0.5rem;
-  width: 100%;
-  color: white;
-  background-color: black;
-}
-
 #top-render {
   padding: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
-  /* //overflow-x: auto; */
   margin: 1rem 0;
-  /* max-width: calc(100vw - 2rem); */ 
   align-items: center;
   justify-content: center;
 }
@@ -39,9 +29,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   max-height: 75%;
   height: 500px;
-  /* //overflow-x: auto; */
   margin: 1rem 0;
-  /* max-width: calc(100vw - 2rem); */ 
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -74,39 +62,8 @@ header {
   justify-content: center;
 }
 
-.img-enlarged {
-  position:fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  /* max-width: 90%;
-  max-height: 90%; */
-  z-index: 10
-  
-}
-
-.img2-enlarged {
-  position:fixed;
-  left: 50%;
-  top: 50%;
-  transform: scale(1.5) translate(-50%, -50%);
-  /* max-width: 90%;
-  max-height: 90%; */
-  z-index: 10
-
-}
-
-/* #top-render img:last-child {
-  margin-right: 0;
-} */
-
 #inspr quote {
   position: relative;
-}
-
-
-#form-div {
-  display: grid;
 }
 
 #journal-form {
@@ -114,7 +71,6 @@ header {
     width: 311px;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
     align-items: center;
     justify-content: center;
     position: relative;
@@ -149,31 +105,9 @@ input[type="submit"]:active {
   width: 350px;
   position: relative;
   max-height: 350px;
-  /* left: 450px;
-  bottom: 375px; */
   border-style: groove;
   overflow-y: auto;
   
-}
-input[type="submit"] {
-  color: white;
-  border: 1px solid white;
-  background-color: black;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-input[type="submit"]:active {
-  background-color: gray;
-}
-
-
-form h4 {
-    width: 100%;
-    padding: 0.25rem;
-    margin: 0.5rem 0;
-    color: white;
-    background-color: black;
 }
 
 .entry-box {
