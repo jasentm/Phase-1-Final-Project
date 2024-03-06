@@ -21,8 +21,7 @@ const renderSpace = (response) => {
       
     imgSpace.src = response.url;
     imgSpace.alt = `Space photo`;
-    imgSpace.title = response.title
-
+    imgSpace.title = `Title: ${response.title} \n Explanation: ${response.explanation}`
 };
 
 const hoverRender = (e) => {

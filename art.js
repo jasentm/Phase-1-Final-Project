@@ -93,10 +93,10 @@ const renderArtwork = (response) => {
 
   img.src = response.primaryImage;
   img.alt = 'Artwork';
-  img.title = response.title;
-  img.artist = response.artistDisplayName;
-  img.date = response.objectDate;
-  img.url = response.objectURL;
+  img.title = `Artist:${response.artistDisplayName} \n Date:${response.objectDate} \n Title: ${response.title} \n URL:${response.objectURL}`;
+  // img.artist = response.artistDisplayName;
+  // img.date = response.objectDate;
+  // img.url = response.objectURL;
 
 
 //Event Listeners
