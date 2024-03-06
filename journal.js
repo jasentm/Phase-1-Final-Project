@@ -35,11 +35,29 @@ fetch('http://localhost:3000/journals')
         
         entryText.addEventListener('click', (e) => {
             e.preventDefault()
-            pastEntry.style.display = 'block'
+
+            const para1 = document.getElementById('prior-date');
+            const colorBox = document.getElementById("prior-color");
+            const para2 = document.getElementById('prior-mood');
+            const para3 = document.getElementById('priorj-entry');
+            const para4 = document.getElementById('prior-inspir');
+
+            para1.textContent = journal.date;
+            colorBox.style.width = '250px';
+            colorBox.style.height = '20px';
+            colorBox.style.backgroundColor = journal.moodColor;
+            colorBox.style.border = "1px solid black";
+            colorBox.style.margin = "5px";
+            colorBox.textContent = "";
+            para2.textContent = journal.mood;
+            para3.textContent = journal.entry;
+            para4.textContent = journal.futureInspo;
+
+            /*pastEntry.style.display = 'block'
 
             previousMood.textContent = journal.mood
             previousJournal.textContent = journal.entry
-            previousInspo.textContent = journal.futureInspo
+            previousInspo.textContent = journal.futureInspo*/
         })
 
 
@@ -86,7 +104,8 @@ journalForm.addEventListener('submit', (e) => {
         newEntryDiv.id = newJournalEntry.id
         newEntryDiv.style.backgroundColor = newJournalEntry.moodColor
         journalBoard.appendChild(newEntryDiv)
-
+        
+        //Creates clickable link to journal entry
         const newEntryText = document.createElement('a')
 
         newEntryText.setAttribute('href','')
@@ -101,22 +120,30 @@ journalForm.addEventListener('submit', (e) => {
         e.target.querySelector('#journal').value = ''
         e.target.querySelector('#futureInspo').value = ''
 
-        //click event on link preventing reload 
-        //WE NEED THIS TO DO SOMETHING ELSE 
         newEntryText.addEventListener('click', (e) => {
             e.preventDefault()
-            pastEntry.style.display = 'block'
 
-            previousMood.textContent = newJournalEntry.mood
-            previousJournal.textContent = newJournalEntry.entry
-            previousInspo.textContent = newJournalEntry.futureInspo
-        })
+            const para1 = document.getElementById('prior-date');
+            const colorBox = document.getElementById("prior-color");
+            const para2 = document.getElementById('prior-mood');
+            const para3 = document.getElementById('priorj-entry');
+            const para4 = document.getElementById('prior-inspir');
 
+            para1.textContent = newJournalEntry.date;
+            colorBox.style.width = '250px';
+            colorBox.style.height = '20px';
+            colorBox.style.backgroundColor = newJournalEntry.moodColor;
+            colorBox.style.border = "1px solid black";
+            colorBox.style.margin = "5px";
+            colorBox.textContent = "";
+            para2.textContent = newJournalEntry.mood;
+            para3.textContent = newJournalEntry.entry;
+            para4.textContent = newJournalEntry.futureInspo;
 
-    })
+         })
     .catch((error => console.error(error)))
+    })
 })
-
 
 //fetch and append quote from past self to DOM
 fetch('http://localhost:3000/journals')

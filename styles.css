@@ -36,7 +36,7 @@ header {
 #bottom-render {
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-height: 75%;
   height: 500px;
   /* //overflow-x: auto; */
@@ -78,7 +78,7 @@ header {
   position:fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   /* max-width: 90%;
   max-height: 90%; */
   z-index: 10
@@ -90,7 +90,6 @@ header {
   left: 50%;
   top: 50%;
   transform: scale(1.5) translate(-50%, -50%);
-   */
   /* max-width: 90%;
   max-height: 90%; */
   z-index: 10
@@ -150,7 +149,7 @@ input[type="submit"]:active {
   width: 313px;
   position: relative;
   /* left: 450px;
-  bottom: 375px; */ */
+  bottom: 375px; */
   border-style: groove;
 
 }
@@ -187,4 +186,10 @@ form h4 {
     line-height: 6.5em;
     background-color: aliceblue;
     opacity: 60%;
+}
+.outlined-field {
+  border: 2px solid white;
+  width: 310px;
+  padding:10px;
+  margin: 5px 0;
 }
