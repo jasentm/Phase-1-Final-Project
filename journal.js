@@ -58,8 +58,27 @@ fetch('http://localhost:3000/journals')
             previousMood.textContent = journal.mood
             previousJournal.textContent = journal.entry
             previousInspo.textContent = journal.futureInspo*/
-        })
 
+            let backgroundMoodColor = entryDiv.style.backgroundColor;
+        
+            // Select the body element
+            let body = document.body;
+          
+            // Set the background color dynamically
+            body.style.backgroundImage = 'linear-gradient(45deg, ' + backgroundMoodColor + ',  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813),  rgba(93, 83, 83, 0.813)';
+        })
+        // const changeBackground = () => {
+
+        //     let backgroundMoodColor = entryDiv.style.backgroundColor;
+        
+        //     // Select the body element
+        //     let body = document.body;
+          
+        //     // Set the background color dynamically
+        //     body.style.backgroundImage = 'linear-gradient(45deg, ' + backgroundMoodColor + ', grey, black, black, black, black)';
+        //   }
+        
+        //   changeBackground();
 
     })
 })
@@ -115,7 +134,7 @@ journalForm.addEventListener('submit', (e) => {
         
         //clear fields on submit 
         e.target.querySelector('#date').value = ''
-        e.target.querySelector('#mood-color').value = ''
+        //e.target.querySelector('#mood-color').value = '#b91313'
         e.target.querySelector('#mood').value = ''
         e.target.querySelector('#journal').value = ''
         e.target.querySelector('#futureInspo').value = ''
@@ -141,7 +160,7 @@ journalForm.addEventListener('submit', (e) => {
             para4.textContent = newJournalEntry.futureInspo;
 
          })
-    .catch((error => console.error(error)))
+    //.catch((error => console.error(error)))
     })
 })
 
@@ -169,4 +188,6 @@ fetch('http://localhost:3000/journals')
     console.log(quoteContainer)
     quoteContainer.textContent = `"${randomFutureInspo}"`;
   })
-  .catch(error => console.error('Error loading data:', error));
+ .catch(error => console.error('Error loading data:', error));
+
+  
